@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# noindexを効かせるため、robots.txtではDisallowしません。HTML内のmeta robotsで検索結果から除外します。
