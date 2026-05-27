@@ -1,4 +1,4 @@
-const CACHE_NAME = 'weekly-planner-v974-weather-timeline-v1';
+const CACHE_NAME = 'weekly-planner-v975-layout-hotfix-v1';
 const APP_SHELL = ['./','./index.html','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-384.png','./icons/icon-512.png','./icons/apple-touch-icon-180.png'];
 self.addEventListener('install', event => { self.skipWaiting(); event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL).catch(()=>undefined))); });
 self.addEventListener('activate', event => { event.waitUntil((async()=>{ const keys=await caches.keys(); await Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k))); await self.clients.claim(); })()); });
